@@ -9,57 +9,57 @@
 }
 
 #botaoComprar{
-	background-color:#1D1D1D;
-	border-radius:0px;
-	font-family: buttonFace;
-	font-size: 25px;
-	padding: 10px;
-	padding-left: 30px;
-	padding-right: 30px;
+  background-color:#1D1D1D;
+  border-radius:0px;
+  font-family: buttonFace;
+  font-size: 25px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 
 #preco{
-	font-size: 40px;
-	color:#1D1D1D;
-	font-family: priceFace;
-	margin-right: 10px;
-	margin-left: 10px;
+  font-size: 40px;
+  color:#1D1D1D;
+  font-family: priceFace;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 #titulo{
-	font-size: 35px;
-	color:#1D1D1D;
-	font-family: priceFace;
+  font-size: 35px;
+  color:#1D1D1D;
+  font-family: priceFace;
 }
 
 
 #stock{
-	vertical-align:middle;
-	font-family: buttonFace;
-	font-size: 18px;
-	color:#17A520;
+  vertical-align:middle;
+  font-family: buttonFace;
+  font-size: 18px;
+  color:#17A520;
 }
 
 .categoria{
-	vertical-align:middle;
-	font-family: buttonFace;
-	color: #1D1D1D;
-	opacity: 0.5;
-	margin-right:20px;
-	
+  vertical-align:middle;
+  font-family: buttonFace;
+  color: #1D1D1D;
+  opacity: 0.5;
+  margin-right:20px;
+  
 }
 
 a:hover{
-	font-family: buttonFace;
-	color: #1D1D1D;
-	opacity: 1;
+  font-family: buttonFace;
+  color: #1D1D1D;
+  opacity: 1;
 }
 
 
 
 
 #detalhes{
-	-webkit-align-content: center;
-	align-content: center;
+  -webkit-align-content: center;
+  align-content: center;
 }

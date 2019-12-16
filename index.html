@@ -8,10 +8,59 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
     <title>Projeto SGI</title>
   </head>
   <body>
-  
+  <div class="lr-container header-container">
+    <div class="flex flex-middle flex-fit">
+        <div class="header-logo ">
+            <a href="/" class="laredoute user-log" title="La Redoute" data-cerberus="img_header_logo">
+                    <img src="images/logo.svg" alt="La Redoute" class="header-logo-img">
+            </a>
+        </div>
+            <div class="header-icon">
+                    <div class="header-icon-container header-icon-container-txt hidden-xs hidden-sm">
+                        <a id="iconNewsletter" class="lr-icon lr-icon-newsletter cfao-hide" data-cerberus="img_header_newsletter_mobile">
+                                <span class="picto-header-text">
+<b>Ofertas!</b>                                </span>
+                        </a><div class="tooltip-wrapper tooltip-default"><div class="tooltip-newsletter tooltip tooltip-white tooltip-squared tooltip-border-grey tooltip-thick" style="display: block;"></div></div>
+                    </div>
+                                <div class="header-icon-container header-icon-container-txt">
+                    <button id="iconProfil" class="lr-icon lr-icon-user cfao-hide" data-cerberus="img_header_myAccount_mobile">
+                                            </button><div class="tooltip-wrapper tooltip-default"><div class="tooltip-login tooltip tooltip-white tooltip-squared tooltip-border-grey tooltip-thick" style="display: block;"></div></div>
+                </div>
+                <div class="header-icon-container">
+                    <a id="IconWishlist" href="/myaccount/wishlist.aspx" class="wishlist lr-icon lr-icon-wishlist-border cfao-hide" data-cerberus="img_header_wishlist_mobile">
+                       <span class="badge"></span>
+                        
+                        <span id="msgTooltip" class="hidden">Veja os seus artigos favoritos</span>
+                    </a><div class="tooltip-wrapper tooltip-default"><div class="tooltip-wishlist tooltip tooltip-white tooltip-squared tooltip-border-grey tooltip-thick" style="display: block;"><div class="text-left">Veja os seus artigos favoritos</div></div></div>
+                </div>
+                    <div class="header-icon-container">
+                        <a href="/shoppingbasket/basket.aspx" id="basketIcon" class="basket lr-icon lr-icon-basket cfao-hide" data-cerberus="img_header_basket_mobile">
+                            <span class="badge"></span>
+                            
+                        </a><div class="tooltip-wrapper tooltip-default"><div class="tooltip-basket tooltip tooltip-white tooltip-squared tooltip-border-grey tooltip-thick" style="display: block;"></div></div>
+                    </div>
+            </div>
+                    <div class="header-sticky-container flex-col-12 flex-col-md-auto">
+                <div class="header-sticky">
+                    <div class="block-search">
+                        <form action="javascript:void(0);" class="block-search-form">
+                            <input type="search" id="header_search_field" class="block-search-input" name="header_search_field" placeholder="Pesquise por referência, artigo e/ou cor" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" data-cerberus="textBox_header_search-engine" maxlength="1500">
+                        </form>
+                        <button type="button" id="eraseSearchButton" class="block-search-remove close search-close" style="display: none;"></button>
+                        <button type="button" id="header_search_button" class="block-search-validate icon icon-glass block-search-button" data-cerberus="button_header_search-engine"></button>
+                        <div class="block-search-suggestion block-search-features-container">
+                            <ul id="searchHistory" style="display: none;"></ul>
+                                <ul id="autocompleteList" style="display: none;"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
   <div class="container">
   <div class="row">
     <div class="col-sm">

@@ -13,11 +13,11 @@
   border-radius:0px;
   font-family: buttonFace;
   font-size: 25px;
-  padding: 10px;
+  padding: 15px;
+  margin-top: 5px;
   padding-left: 30px;
   padding-right: 30px;
 }
-
 
 #preco{
   font-size: 40px;
@@ -58,8 +58,34 @@ a:hover{
 
 
 
-
 #detalhes{
   -webkit-align-content: center;
   align-content: center;
 }
+
+
+#quantidade{
+    padding-top: 4px;
+    align-content: center;
+    width: 12%;
+    text-indent: 7px;
+    color:#1D1D1D;
+    font-size: 20px;
+    font-family: priceFace;
+    border: none;
+    border-bottom: 1px solid black;
+    color:#1D1D1D;
+    background: url(../images/arrow_d.png) no-repeat right;
+}
+
+#quantidade:hover{
+  background-color: #EEEEEE; 
+}
+
+
+option{
+  color:#1D1D1D;
+  font-size: 20px;
+  font-family: priceFace;
+}
+

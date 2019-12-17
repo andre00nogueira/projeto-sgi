@@ -7,10 +7,12 @@ var camara =  new THREE.PerspectiveCamera(70, 600/530, 0.1, 500);
 
 var canvas = document.getElementById('myCanvas');
 // preparar um renderer WebGL com um viewport 800x600 a adicioná-lo à pagina
-var renderer = new THREE.WebGLRenderer({ canvas: canvas });
+var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
 
 renderer.setSize(600, 530); // tamanho do canvas (da área preta)
 renderer.shadowMap.enabled = true
+renderer.gammaOutput= true
+renderer.setPixelRatio(window.devicePixelRatio)
 
 
 camara.position.x = 0;

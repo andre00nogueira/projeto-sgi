@@ -24,7 +24,6 @@ camara.position.z = -15;
 // OrbitControls.js
 var controlos = new THREE.OrbitControls(camara, renderer.domElement);
 
-camara.lookAt(0,0,90);
 
 // GLTFLoader (BLENDER PARA THREE.JS)
 var carregador = new THREE.GLTFLoader();
@@ -64,6 +63,7 @@ cena.add(luzPonto1);
 
 
 function animar(){ 
+    camara.lookAt(0, -4, 1)
 	requestAnimationFrame(animar);
 	renderer.render(cena, camara);
 } 

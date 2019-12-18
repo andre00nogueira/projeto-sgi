@@ -1,125 +1,151 @@
 <!doctype html>
 <html lang="pt">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
     <title>Projeto SGI</title>
-  </head>
-  <body>
-  <div class="lr-container header-container">
+</head>
+<body>
+<div class="lr-container header-container">
     <div class="flex flex-middle flex-fit">
         <div class="header-logo ">
             <a href="/" class="laredoute user-log" title="La Redoute" data-cerberus="img_header_logo">
-                    <img src="images/logo.svg" alt="La Redoute" class="header-logo-img">
+                <img src="images/logo.svg" alt="La Redoute" class="header-logo-img">
             </a>
         </div>
-            <div class="header-icon">
-                    <div class="header-icon-container header-icon-container-txt hidden-xs hidden-sm">
-                        <a id="iconNewsletter" class="lr-icon lr-icon-newsletter cfao-hide" data-cerberus="img_header_newsletter_mobile">
+        <div class="header-icon">
+            <div class="header-icon-container header-icon-container-txt hidden-xs hidden-sm">
+                <a id="iconNewsletter" class="lr-icon lr-icon-newsletter cfao-hide"
+                   data-cerberus="img_header_newsletter_mobile">
                                 <span class="picto-header-text">
 <b>Ofertas!</b>                                </span>
-                        </a><div class="tooltip-wrapper tooltip-default"><div class="tooltip-newsletter tooltip tooltip-white tooltip-squared tooltip-border-grey tooltip-thick" style="display: block;"></div></div>
-                    </div>
-                                <div class="header-icon-container header-icon-container-txt">
-                    <button id="iconProfil" class="lr-icon lr-icon-user cfao-hide" data-cerberus="img_header_myAccount_mobile">
-                                            </button><div class="tooltip-wrapper tooltip-default"><div class="tooltip-login tooltip tooltip-white tooltip-squared tooltip-border-grey tooltip-thick" style="display: block;"></div></div>
+                </a>
+                <div class="tooltip-wrapper tooltip-default">
+                    <div class="tooltip-newsletter tooltip tooltip-white tooltip-squared tooltip-border-grey tooltip-thick"
+                         style="display: block;"></div>
                 </div>
-                <div class="header-icon-container">
-                    <a id="IconWishlist" href="/myaccount/wishlist.aspx" class="wishlist lr-icon lr-icon-wishlist-border cfao-hide" data-cerberus="img_header_wishlist_mobile">
-                       <span class="badge"></span>
-                        
-                        <span id="msgTooltip" class="hidden">Veja os seus artigos favoritos</span>
-                    </a><div class="tooltip-wrapper tooltip-default"><div class="tooltip-wishlist tooltip tooltip-white tooltip-squared tooltip-border-grey tooltip-thick" style="display: block;"><div class="text-left">Veja os seus artigos favoritos</div></div></div>
-                </div>
-                    <div class="header-icon-container">
-                        <a href="/shoppingbasket/basket.aspx" id="basketIcon" class="basket lr-icon lr-icon-basket cfao-hide" data-cerberus="img_header_basket_mobile">
-                            <span class="badge"></span>
-                            
-                        </a><div class="tooltip-wrapper tooltip-default"><div class="tooltip-basket tooltip tooltip-white tooltip-squared tooltip-border-grey tooltip-thick" style="display: block;"></div></div>
-                    </div>
             </div>
-                    <div class="header-sticky-container flex-col-12 flex-col-md-auto">
-                <div class="header-sticky">
-                    <div class="block-search">
-                        <form action="javascript:void(0);" class="block-search-form">
-                            <input type="search" id="header_search_field" class="block-search-input" name="header_search_field" placeholder="Pesquise por referência, artigo e/ou cor" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" data-cerberus="textBox_header_search-engine" maxlength="1500">
-                        </form>
-                        <button type="button" id="eraseSearchButton" class="block-search-remove close search-close" style="display: none;"></button>
-                        <button type="button" id="header_search_button" class="block-search-validate icon icon-glass block-search-button" data-cerberus="button_header_search-engine"></button>
-                        <div class="block-search-suggestion block-search-features-container">
-                            <ul id="searchHistory" style="display: none;"></ul>
-                                <ul id="autocompleteList" style="display: none;"></ul>
-                        </div>
+            <div class="header-icon-container header-icon-container-txt">
+                <button id="iconProfil" class="lr-icon lr-icon-user cfao-hide"
+                        data-cerberus="img_header_myAccount_mobile">
+                </button>
+                <div class="tooltip-wrapper tooltip-default">
+                    <div class="tooltip-login tooltip tooltip-white tooltip-squared tooltip-border-grey tooltip-thick"
+                         style="display: block;"></div>
+                </div>
+            </div>
+            <div class="header-icon-container">
+                <a id="IconWishlist" href="#" class="wishlist lr-icon lr-icon-wishlist-border cfao-hide"
+                   data-cerberus="img_header_wishlist_mobile">
+                    <span class="badge"></span>
+
+                    <span id="msgTooltip" class="hidden">Veja os seus artigos favoritos</span>
+                </a>
+                <div class="tooltip-wrapper tooltip-default">
+                    <div class="tooltip-wishlist tooltip tooltip-white tooltip-squared tooltip-border-grey tooltip-thick"
+                         style="display: block;">
+                        <div class="text-left">Veja os seus artigos favoritos</div>
                     </div>
                 </div>
             </div>
+            <div class="header-icon-container">
+                <a href="#" id="basketIcon" class="basket lr-icon lr-icon-basket cfao-hide"
+                   data-cerberus="img_header_basket_mobile">
+                    <span class="badge"></span>
+
+                </a>
+                <div class="tooltip-wrapper tooltip-default">
+                    <div class="tooltip-basket tooltip tooltip-white tooltip-squared tooltip-border-grey tooltip-thick"
+                         style="display: block;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="header-sticky-container flex-col-12 flex-col-md-auto">
+            <div class="header-sticky">
+                <div class="block-search">
+                    <input type="search" id="header_search_field" class="block-search-input" name="header_search_field"
+                           placeholder="Pesquise por referência, artigo e/ou cor" autocorrect="off" autocomplete="off"
+                           autocapitalize="off" spellcheck="false" data-cerberus="textBox_header_search-engine"
+                           maxlength="1500">
+                    <button type="button" id="header_search_button"
+                            class="block-search-validate icon icon-glass block-search-button"
+                            data-cerberus="button_header_search-engine"></button>
+                </div>
+            </div>
+        </div>
     </div>
     <hr>
 </div>
-  <div class="container">
-  <div class="row">
-    <div class="col-md-5">
-      <div >
-		<span id="titulo">Mochila Projeto SGI</span>
-		<br>
-		<div id="detalhes">
-			<a href="#" class="categoria">Unisexo > Mochilas</a>
-			<img src="images/rating.png">
-			<a href="#" class="categoria"> (10) </a>
-			<br>
-			<a href="#" class="categoria">Ver Detalhes</a>
-		</div>
-		<br>
-		<hr>
-		<br><br><br><br><br><br><br><br><br><br>
-			<!-- TODO add buttons estado -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div>
+                <span id="titulo">Mochila Projeto SGI</span>
+                <br>
+                <div id="detalhes">
+                    <a href="#" class="categoria">Unisexo > Mochilas</a>
+                    <img src="images/rating.png">
+                    <a href="#" class="categoria"> (10) </a>
+                    <br>
+                    <a href="#" class="categoria">Ver Detalhes</a>
+                </div>
+                <br>
+                <hr>
+                <br><br><br><br><br><br><br><br><br><br>
+                <!-- TODO add buttons estado -->
 
-			<!-- TODO add button cor -->
+                <!-- TODO add button cor -->
 
 
+                <hr>
+                <div style="vertical-align:middle;">
+                    <img src="images/bola.png">
+                    <span id="stock">Em Stock</span>
 
-		<hr>
-		<div style="vertical-align:middle;">
-			<img  src="images/bola.png">
-			<span id="stock">Em Stock</span>
-			
-			<span id="preco">49.99€</span>
-			<select id="quantidade">
-				<option value="1" selected="selected">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-			</select>
-			<br>
-			<button type="button" id="botaoComprar" class="btn btn-dark">Adicionar ao carrinho!</button>
-		</div>
-  </div>
+                    <span id="preco">49.99€</span>
+                    <select id="quantidade">
+                        <option value="1" selected="selected">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <br>
+                    <button type="button" id="botaoComprar" class="btn btn-dark">Adicionar ao carrinho!</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <canvas id="myCanvas"></canvas>
+        </div>
     </div>
-    <div class="col-md-7">
-      	<canvas id="myCanvas"></canvas>
-    </div>
-  </div>
-</div>	
+</div>
 
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
-    
-    <script src="https://cdn.rawgit.com/mrdoob/three.js/r109/examples/js/loaders/GLTFLoader.js"></script>
-    
-    <script src="https://cdn.rawgit.com/mrdoob/three.js/r109/examples/js/controls/OrbitControls.js"></script>
-    
-    <script src="js/main.js"></script>
-  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+<script src="https://cdn.rawgit.com/mrdoob/three.js/r109/examples/js/loaders/GLTFLoader.js"></script>
+
+<script src="https://cdn.rawgit.com/mrdoob/three.js/r109/examples/js/controls/OrbitControls.js"></script>
+
+<script src="js/main.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
 </html>

@@ -85,7 +85,7 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-sm-5">
             <div>
                 <span id="titulo">Mochila Projeto SGI</span>
                 <br>
@@ -98,12 +98,26 @@
                 </div>
                 <br>
                 <hr>
-                <br><br><br><br><br><br><br><br><br><br>
+
                 <!-- TODO add buttons estado -->
-
+                <span class="spanOptions">Estado</span>
+                <br>
+                <br>
+                <button type="button" id="btnFechar" onclick="setClicked(2)" class="btn btnBorderDark btnBorderDarkClicked">Fechada</button>
+                <button type="button" id="btnAbrir" onclick="setClicked(1)" class="btn btnBorderDark">Aberta</button>
                 <!-- TODO add button cor -->
-
-
+                <br><br><br>
+                <span class="spanOptions">Cor</span>
+                <br>
+                <br>
+                <select id="cor">
+                    <option value="1" selected="selected">Original</option>
+                    <option value="2">Amarelo</option>
+                    <option value="3">Verde</option>
+                    <option value="4">Vermelho</option>
+                    <option value="5">Azul</option>
+                </select>
+                <br>
                 <hr>
                 <div style="vertical-align:middle;">
                     <img src="images/bola.png">
@@ -122,8 +136,26 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-7">
+        <div class="col-sm-5">
             <canvas id="myCanvas"></canvas>
+        </div>
+
+        <div class="col-sm-1" style="float: right;  margin-left: 90px">
+            <div class="row items">
+                <img src="images/mochilaBack.JPG" width="100%" height="100%">
+            </div>
+            <div class="row items">
+                <img src="images/mochilaFront.JPG" width="100%" height="100%">
+            </div>
+            <div class="row items">
+                <img src="images/mochilaIn1.JPG" width="100%" height="100%">
+            </div>
+            <div class="row items">
+                <img src="images/mochilaLeft.JPG" width="100%" height="100%">
+            </div>
+            <div class="row items">
+                <img src="images/mochilaTop.JPG" width="100%" height="100%">
+            </div>
         </div>
     </div>
 </div>
@@ -148,4 +180,18 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
+
+<script>
+    function setClicked(valor) {
+        if (valor === 1){
+            document.getElementById("btnAbrir").style.backgroundColor = "rgba(29, 29, 29, 0.12)";
+            document.getElementById("btnFechar").style.backgroundColor = "white";
+
+        }else{
+            document.getElementById("btnAbrir").style.backgroundColor = "white";
+            document.getElementById("btnFechar").style.backgroundColor = "rgba(29, 29, 29, 0.12)";
+        }
+    }
+    
+</script>
 </html>

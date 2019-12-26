@@ -47,7 +47,7 @@
   color: #1D1D1D;
   opacity: 0.5;
   margin-right:20px;
-  
+
 }
 
 a:hover{
@@ -67,19 +67,34 @@ a:hover{
 #quantidade{
     padding-top: 4px;
     align-content: center;
-    width: 15%;
+    width: 14%;
     text-indent: 7px;
     color:#1D1D1D;
     font-size: 20px;
-    font-family: priceFace;
+    font-family: buttonFace;
     border: none;
     border-bottom: 1px solid black;
     color:#1D1D1D;
     background: url(../images/arrow_d.png) no-repeat right;
 }
 
+
+#cor{
+     padding-top: 4px;
+     align-content: center;
+     width: 30%;
+     color:#1D1D1D;
+     padding-bottom: 5px;
+     font-size: 20px;
+     font-family: buttonFace;
+     border: none;
+     border-bottom: 1px solid black;
+     color:#1D1D1D;
+     background: url(../images/arrow_d.png) no-repeat right;
+ }
+
 #quantidade:hover{
-  background-color: #EEEEEE; 
+  background-color: #EEEEEE;
 }
 
 
@@ -94,3 +109,28 @@ option{
     border: 1px solid #1D1D1D;
 }
 
+.items{
+    height: 17%;
+    border-bottom: 1px solid #1D1D1D;
+    margin-bottom: 15px;
+}
+
+.spanOptions{
+    font-family: priceFace;
+    font-size: 20px;
+}
+
+.btnBorderDark{
+    font-family: priceFace;
+    border: 1px solid #1D1D1D;
+    font-size: 15px;
+    width: 25%;
+}
+
+.btnBorderDark:hover{
+    background: rgba(29, 29, 29, 0.12);
+}
+
+.btnBorderDarkClicked{
+    background: rgba(29, 29, 29, 0.12);
+}

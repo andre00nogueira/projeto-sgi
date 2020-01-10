@@ -107,16 +107,24 @@
                 <button type="button" id="btnAbrir" onclick="setClicked(1)" class="btn btnBorderDark">Aberta</button>
                 <!-- TODO add button cor -->
                 <br><br><br>
-                <span class="spanOptions">Mudar Posição...</span>
+                <span class="spanOptions" style="margin-right: 20%">Mudar Posição...</span>
+                <span class="spanOptions">Mudar Cor...</span>
                 <br>
                 <br>
-                <select id="posicoes">
+                <select class="selecionar" id="posicoes" style="display: inline; margin-right: 20%">
                     <option value="1" selected="selected">Frente</option>
                     <option value="2">Trás</option>
                     <option value="3">Cima</option>
                     <option value="4">Baixo</option>
                     <option value="5">Lado Esquerdo</option>
                     <option value="6">Lado Direito</option>
+                </select>
+
+                <select class="selecionar" id="cor" style="display: inline" >
+                    <option value="1" selected="selected">Original</option>
+                    <option value="2">Branco</option>
+                    <option value="3">Azul</option>
+                    <option value="4">Vermelho</option>
                 </select>
                 <br>
                 <hr>

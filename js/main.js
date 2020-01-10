@@ -6,6 +6,7 @@ var camara =  new THREE.PerspectiveCamera(70, 530/530, 0.1, 500);
 
 
 var canvas = document.getElementById('myCanvas');
+
 // preparar um renderer WebGL com um viewport 800x600 a adicioná-lo à pagina
 var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
 
@@ -20,6 +21,69 @@ camara.position.y = -5;
 camara.position.z = -10;
 
 
+/* Declarar objetos do HTML */
+
+var btnAbrir = document.getElementById('btnAbrir');
+var btnFechar = document.getElementById('btnFechar');
+
+
+btnAbrir.addEventListener('click', function () {
+	alert('Mochila Aberta');
+});
+
+btnFechar.addEventListener('click', function () {
+	alert('Mochila Fechada');
+});
+
+
+var visualizar = document.getElementById('posicoes');
+
+visualizar.addEventListener('change', function() {
+	var valor = visualizar.options[visualizar.selectedIndex].value; // Obter o valor/indice (value) selecionado...
+
+	// Mudar a posição da camara consoante a escolha
+	switch(valor){
+		case '1':
+			camara.position.x = 0;
+			camara.position.y = -5;
+			camara.position.z = -10;
+			break;
+
+		case '2':
+			camara.position.x = 0;
+			camara.position.y = -5;
+			camara.position.z = 10;
+			break;
+
+		case '3':
+			camara.position.x = 0;
+			camara.position.y = 5;
+			camara.position.z = 0;
+			break;
+
+		case '4':
+			camara.position.x = 0;
+			camara.position.y = -15;
+			camara.position.z = 0;
+			break;
+
+		case '5':
+			camara.position.x = 15;
+			camara.position.y = 0;
+			camara.position.z = 0;
+			break;
+
+		case '6':
+			camara.position.x = -15;
+			camara.position.y = 0;
+			camara.position.z = 0;
+			break;
+	}
+});
+
+
+
+
 
 // OrbitControls.js
 var controlos = new THREE.OrbitControls(camara, renderer.domElement);
@@ -28,7 +92,7 @@ var controlos = new THREE.OrbitControls(camara, renderer.domElement);
 // GLTFLoader (BLENDER PARA THREE.JS)
 var carregador = new THREE.GLTFLoader();
 carregador.load(
-	'blender/mochila.glb', // Nome do ficheiro .gltf
+	'blender/mochila.gltf', // Nome do ficheiro .gltf
 	function(gltf){		// Adicionar o ficheiro à cena a ser renderizada
 		cena.add(gltf.scene);
 	}
@@ -63,7 +127,7 @@ cena.add(luzPonto1);
 
 
 function animar(){ 
-    camara.lookAt(0, -4, 1)
+    camara.lookAt(0, -4, 1);
 	requestAnimationFrame(animar);
 	renderer.render(cena, camara);
 } 

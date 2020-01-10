@@ -87,6 +87,9 @@
     <div class="row">
         <div class="col-sm-5">
             <div>
+
+
+                <!-- ***************************** TÍTULO/DESCRIÇÃO/CATEGORIA ***************************** -->
                 <span id="titulo">Mochila Projeto SGI</span>
                 <br>
                 <div id="detalhes">
@@ -99,14 +102,25 @@
                 <br>
                 <hr>
 
-                <!-- TODO add buttons estado -->
+
+
+                <!-- ***************************** BUTTONS ABRIR / FECHAR ***************************** -->
                 <span class="spanOptions">Estado</span>
                 <br>
                 <br>
-                <button type="button" id="btnFechar" onclick="setClicked(2)" class="btn btnBorderDark btnBorderDarkClicked">Fechada</button>
+                <button type="button" id="btnFechar" onclick="setClicked(2)"
+                        class="btn btnBorderDark btnBorderDarkClicked">Fechada
+                </button>
                 <button type="button" id="btnAbrir" onclick="setClicked(1)" class="btn btnBorderDark">Aberta</button>
-                <!-- TODO add button cor -->
+
+
+
                 <br><br><br>
+
+
+
+                <!-- ***************************** BUTTONS MUDAR POSIÇÃO ***************************** -->
+
                 <span class="spanOptions" style="margin-right: 20%">Mudar Posição...</span>
                 <span class="spanOptions">Mudar Cor...</span>
                 <br>
@@ -120,7 +134,11 @@
                     <option value="6">Lado Direito</option>
                 </select>
 
-                <select class="selecionar" id="cor" style="display: inline" >
+
+                <!-- ***************************** BUTTONS MUDAR COR ***************************** -->
+
+
+                <select class="selecionar" id="cor" style="display: inline">
                     <option value="1" selected="selected">Original</option>
                     <option value="2">Branco</option>
                     <option value="3">Azul</option>
@@ -128,6 +146,11 @@
                 </select>
                 <br>
                 <hr>
+
+
+
+                <!-- ***************************** QUANTIDADE/STOCK/PREÇO/COMPRAR ***************************** -->
+
                 <div style="vertical-align:middle;">
                     <img src="images/bola.png">
                     <span id="stock">Em Stock</span>
@@ -145,10 +168,15 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- ***************************** CANVAS PRINCIPAL ***************************** -->
         <div class="col-sm-5">
             <canvas id="myCanvas"></canvas>
         </div>
 
+
+        <!-- ***************************** IMAGENS MINIATURA MOCHILA ***************************** -->
         <div class="col-sm-1" style="float: right;  margin-left: 90px">
             <div class="row items">
                 <img src="images/mochilaBack.JPG" width="100%" height="100%">
@@ -192,15 +220,15 @@
 
 <script>
     function setClicked(valor) {
-        if (valor === 1){
+        if (valor === 1) {
             document.getElementById("btnAbrir").style.backgroundColor = "rgba(29, 29, 29, 0.12)";
             document.getElementById("btnFechar").style.backgroundColor = "white";
 
-        }else{
+        } else {
             document.getElementById("btnAbrir").style.backgroundColor = "white";
             document.getElementById("btnFechar").style.backgroundColor = "rgba(29, 29, 29, 0.12)";
         }
     }
-    
+
 </script>
 </html>

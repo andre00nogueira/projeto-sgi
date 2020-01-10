@@ -1,21 +1,25 @@
 // Criar uma cena...
 var cena =  new THREE.Scene();
-cena.background = new THREE.Color( 0xFFFFFF );
+
+
+cena.background = new THREE.Color(0xFFFFFF); // Alterar o fundo da cena para BRANCO
+
 // Criar uma camara
 var camara =  new THREE.PerspectiveCamera(70, 530/530, 0.1, 500);
 
 
-var canvas = document.getElementById('myCanvas');
+var canvas = document.getElementById('myCanvas'); // Canvas adicionado no HTML
 
-// preparar um renderer WebGL com um viewport 800x600 a adicioná-lo à pagina
+// preparar um renderer WebGL e adicioná-lo à pagina
 var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
 
-renderer.setSize(530, 530); // tamanho do canvas (da área preta)
-renderer.shadowMap.enabled = true
-renderer.gammaOutput= true
-renderer.setPixelRatio(window.devicePixelRatio)
+renderer.setSize(530, 530); // tamanho do canvas
+renderer.shadowMap.enabled = true;
+renderer.gammaOutput= true; // Clarear o objecto
+renderer.setPixelRatio(window.devicePixelRatio); // Previnir o canvas ofuscado nas máquinas com High Pixel Density
 
 
+// Posição inicial da camera (vista frontal)
 camara.position.x = 0;
 camara.position.y = -5;
 camara.position.z = -10;
@@ -43,37 +47,37 @@ visualizar.addEventListener('change', function() {
 
 	// Mudar a posição da camara consoante a escolha
 	switch(valor){
-		case '1':
+		case '1': // Vista frontal
 			camara.position.x = 0;
 			camara.position.y = -5;
 			camara.position.z = -10;
 			break;
 
-		case '2':
+		case '2': // Vista traseira
 			camara.position.x = 0;
 			camara.position.y = -5;
 			camara.position.z = 10;
 			break;
 
-		case '3':
+		case '3': // Vista de cima
 			camara.position.x = 0;
 			camara.position.y = 5;
 			camara.position.z = 0;
 			break;
 
-		case '4':
+		case '4': // Vista de baixo
 			camara.position.x = 0;
 			camara.position.y = -15;
 			camara.position.z = 0;
 			break;
 
-		case '5':
+		case '5': // Vista lado esquerdo
 			camara.position.x = 15;
 			camara.position.y = 0;
 			camara.position.z = 0;
 			break;
 
-		case '6':
+		case '6': // Vista lado direito
 			camara.position.x = -15;
 			camara.position.y = 0;
 			camara.position.z = 0;
@@ -106,7 +110,7 @@ cena.add(luzPonto1);
 
 
 // Adicionar pontos de luz
-var luzPonto1 = new THREE.PointLight("white");
+luzPonto1 = new THREE.PointLight("white");
 luzPonto1.position.set(-5, -5, 5);
 cena.add(luzPonto1);
 

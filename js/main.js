@@ -31,13 +31,7 @@ var btnAbrir = document.getElementById('btnAbrir');
 var btnFechar = document.getElementById('btnFechar');
 
 
-btnAbrir.addEventListener('click', function () {
-	alert('Mochila Aberta');
-});
 
-btnFechar.addEventListener('click', function () {
-	alert('Mochila Fechada');
-});
 
 
 var visualizar = document.getElementById('posicoes');
@@ -86,7 +80,8 @@ visualizar.addEventListener('change', function() {
 });
 
 
-
+var relogio = new THREE.Clock();
+var misturador = new THREE.AnimationMixer(cena);
 
 
 // OrbitControls.js
@@ -99,6 +94,22 @@ carregador.load(
 	'blender/mochila.gltf', // Nome do ficheiro .gltf
 	function(gltf){		// Adicionar o ficheiro à cena a ser renderizada
 		cena.add(gltf.scene);
+
+		btnAbrir.addEventListener('click', function () {
+			clipe = THREE.AnimationClip.findByName( gltf.animations, 'KeyAction' );
+			acao = misturador.clipAction( clipe );
+			acao.play();
+			alert('Mochila Aberta');
+		});
+
+
+		btnFechar.addEventListener('click', function () {
+			clipe = THREE.AnimationClip.findByName( gltf.animations, 'KeyAction' );
+			acao = misturador.clipAction( clipe );
+			acao.play();
+			alert('Mochila Fechada');
+		});
+
 	}
 );
 
@@ -134,5 +145,6 @@ function animar(){
     camara.lookAt(0, -4, 1);
 	requestAnimationFrame(animar);
 	renderer.render(cena, camara);
+	misturador.update(relogio.getDelta())
 } 
 animar();

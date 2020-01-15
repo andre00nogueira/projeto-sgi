@@ -95,24 +95,37 @@ carregador.load(
 	function(gltf){		// Adicionar o ficheiro à cena a ser renderizada
 		cena.add(gltf.scene);
 
-		btnAbrir.addEventListener('click', function () {
-			clipe = THREE.AnimationClip.findByName( gltf.animations, 'KeyAction' );
-			acao = misturador.clipAction( clipe );
-			acao.play();
-			alert('Mochila Aberta');
-		});
+		// Animação
+		// Encontra a animação pelo nome 'mochilaAction'
+		clipe = THREE.AnimationClip.findByName(gltf.animations, 'mochilaAction');
 
+		// Adiciona a animação ao mixer
+		acao = misturador.clipAction(clipe);
 
-		btnFechar.addEventListener('click', function () {
-			clipe = THREE.AnimationClip.findByName( gltf.animations, 'KeyAction' );
-			acao = misturador.clipAction( clipe );
-			acao.play();
-			alert('Mochila Fechada');
-		});
+		// Para na última frame, não para na primeira
+		acao.clampWhenFinished = true;
 
+		// Repete apenas uma vez
+		acao.setLoop(THREE.LoopOnce);
 	}
 );
 
+btnAbrir.addEventListener('click', function () {
+	// Tempo positivo == Ação normal
+	acao.timeScale = 1;
+	acao.play().reset();
+});
+
+
+btnFechar.addEventListener('click', function () {
+	//acao.loop = true;
+	acao.paused = false;
+	// Tempo negativo == Ação Inversa
+	acao.timeScale = -1;
+
+	//acao.setLoop(THREE.LoopOnce);
+	acao.play().reset;
+});
 
 // Adicionar pontos de luz
 var luzPonto1 = new THREE.PointLight("white");

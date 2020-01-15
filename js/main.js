@@ -33,6 +33,7 @@ var btnFechar = document.getElementById('btnFechar');
 
 
 
+var cor  = document.getElementById('cor');
 
 var visualizar = document.getElementById('posicoes');
 
@@ -80,6 +81,38 @@ visualizar.addEventListener('change', function() {
 });
 
 
+cor.addEventListener('change', function() {
+	var valor = cor.options[cor.selectedIndex].value; // Obter o valor/indice (value) selecionado...
+
+	// Mudar a posição da camara consoante a escolha
+	switch(valor){
+		case '1': // Original
+			color = new THREE.Color(0x302f2f);
+			cena.getObjectByName('presilha').material.color.set(color);
+			cena.getObjectByName('argola').material.color.set(color);
+			break;
+
+		case '2': // Branco
+			color = new THREE.Color(0xebebeb);
+			cena.getObjectByName('presilha').material.color.set(color);
+			cena.getObjectByName('argola').material.color.set(color);
+			break;
+
+		case '3': // Azul
+			color = new THREE.Color(0x277a91);
+			cena.getObjectByName('presilha').material.color.set(color);
+			cena.getObjectByName('argola').material.color.set(color);
+			break;
+
+		case '4': // Vermelho
+			color = new THREE.Color(0xa8323e);
+			cena.getObjectByName('presilha').material.color.set(color);
+			cena.getObjectByName('argola').material.color.set(color);
+			break;
+	}
+});
+
+
 var relogio = new THREE.Clock();
 var misturador = new THREE.AnimationMixer(cena);
 
@@ -91,13 +124,13 @@ var controlos = new THREE.OrbitControls(camara, renderer.domElement);
 // GLTFLoader (BLENDER PARA THREE.JS)
 var carregador = new THREE.GLTFLoader();
 carregador.load(
-	'blender/mochila.gltf', // Nome do ficheiro .gltf
+	'blender/mochila_t.gltf', // Nome do ficheiro .gltf
 	function(gltf){		// Adicionar o ficheiro à cena a ser renderizada
 		cena.add(gltf.scene);
 
 		// Animação
 		// Encontra a animação pelo nome 'mochilaAction'
-		clipe = THREE.AnimationClip.findByName(gltf.animations, 'mochilaAction');
+		clipe = THREE.AnimationClip.findByName(gltf.animations, 'KeyAction.001');
 
 		// Adiciona a animação ao mixer
 		acao = misturador.clipAction(clipe);
@@ -107,25 +140,32 @@ carregador.load(
 
 		// Repete apenas uma vez
 		acao.setLoop(THREE.LoopOnce);
+
+		var color = new THREE.Color(0x302f2f);
+		cena.getObjectByName('presilha').material.color.set(color);
+		cena.getObjectByName('argola').material.color.set(color);
 	}
 );
 
 btnAbrir.addEventListener('click', function () {
+
 	// Tempo positivo == Ação normal
 	acao.timeScale = 1;
+	// Começa animação e dá reset
 	acao.play().reset();
 });
 
 
 btnFechar.addEventListener('click', function () {
-	//acao.loop = true;
+	// Mantém a animação pausada
 	acao.paused = false;
 	// Tempo negativo == Ação Inversa
 	acao.timeScale = -1;
-
-	//acao.setLoop(THREE.LoopOnce);
+	// Começa animação e dá reset
 	acao.play().reset;
 });
+
+
 
 // Adicionar pontos de luz
 var luzPonto1 = new THREE.PointLight("white");
